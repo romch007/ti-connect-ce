@@ -1,0 +1,10 @@
+
+# Created by https://www.toptal.com/developers/gitignore/api/chocolatey
+# Edit at https://www.toptal.com/developers/gitignore?templates=chocolatey
+
+### Chocolatey ###
+# Exclude packaged modules
+*.nupkg
+
+# End of https://www.toptal.com/developers/gitignore/api/chocolatey
+
