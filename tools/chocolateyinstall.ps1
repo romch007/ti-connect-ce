@@ -8,7 +8,6 @@ $packageArgs = @{
   unzipLocation = $toolsDir
   fileType      = 'msi'
   url           = $url
-  url64bit      = $url64
 
   softwareName  = 'ti-connect-ce*'
 
