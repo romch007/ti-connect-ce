@@ -3,6 +3,8 @@ $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'https://education.ti.com/download/en/ed-tech/13312F7CEC074A2DAFD7EE5646129839/A01980B6930343518F9014853089FA71/TIConnectCE-5.6.3.2278.msi'
 
+Start-ChocolateyProcessAsAdmin "certutil -addstore 'TrustedPublisher', '$toolsDir\texas.cer'"
+
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
