@@ -1,7 +1,7 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://education.ti.com/download/en/ed-tech/13312F7CEC074A2DAFD7EE5646129839/E83C88A7C19B4D0C87429F5C1CDDD4D6/TIConnectCE-6.0.0.2688.msi'
+$url        = 'https://education.ti.com/download/en/ed-tech/CA9C74CAD02440A69FDC7189D7E1B6C2/7C24719EAB584A7D8751EB68A37B3DE9/TIConnectCE-6.0.1.344.msi'
 
 Start-ChocolateyProcessAsAdmin "certutil -addstore 'TrustedPublisher' '$toolsDir\texas.cer'"
 
@@ -13,7 +13,7 @@ $packageArgs = @{
 
   softwareName  = 'ti-connect-ce*'
 
-  checksum      = 'F20F433ED9978055C531E8737A74EFD45A5622B48C72C7EA3C57D57F2AD90B02'
+  checksum      = '72D19FAE9B0273E3AE25BC6E898CE422FBB4DEE65D44F2785A2FFB4F30074F28'
   checksumType  = 'sha256'
 
   silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
